@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Software Engineer turned Entrepreneur. I love building things and helping people.",
   summary:
-    "I’m Ruiyang Dai, a Mobile App Engineer and XR Researcher passionate about building intelligent, scalable applications that solve real-world problems. With a strong foundation in Computer Science from UIUC and current graduate studies in ECE at Carnegie Mellon, I bridge deep technical expertise with hands-on development across iOS, distributed systems, and immersive technologies. From launching a production-grade iOS app with cloud sync and CI/CD, to optimizing real-time XR rendering pipelines and architecting custom network protocols, I thrive on designing systems that are performant, user-focused, and maintainable. My work is driven by curiosity, structured thinking, and a commitment to quality engineering.",
+    "I’m Ruiyang Dai, a Software Developer passionate about building intelligent, scalable applications that solve real-world problems. With a strong foundation in Computer Science from UIUC and current graduate studies in ECE at Carnegie Mellon, I bridge deep technical expertise with hands-on development across iOS, distributed systems, and immersive technologies. From launching a production-grade iOS app with cloud sync and CI/CD, to optimizing real-time XR rendering pipelines and architecting custom network protocols, I thrive on designing systems that are performant, user-focused, and maintainable. My work is driven by curiosity, structured thinking, and a commitment to quality engineering.",
   avatarUrl: "/me.png",
   skills: [
     "Python",
@@ -231,6 +231,36 @@ It uses a combination of fuction calls and polymorphism to handle different user
         },
       ],
       image: "/renderfusion.jpg",
+      video:
+        "",
+    },
+    {
+      title: "Face Mask Detection - Computer Vision",
+      href: "https://github.com/CharlesDaiii/CS-445-FA21-Final-Project/tree/main",
+      dates: "Oct 2021 - Nov 2021",
+      active: true,
+      description:
+      `
+In the era of COVID-19, although with vaccines, the primary line of defense still lies upon face masks. In many countries, we have seen that there are manual people checking whether or not people are wearing masks properly. Therefore, the idea of creating a mask detector sparks our interest. In this project, we aim to apply computational photography, computer vision, and machine learning to create a face mask detector. During this process, we hope to apply what we have learned during the class and challenge ourselves with essential techniques in Computer Vision that can potentially improve our world.
+      `,
+      technologies: [
+        'OpenCV',
+        'Python',
+        'Computer Vision',
+        'Machine Learning',
+        'Computer Graphics',
+        'ResNet 34',
+        'CNN',
+        'Pytorch'
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/CharlesDaiii/CS-445-FA21-Final-Project/tree/main",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/face-mask-detection.gif",
       video:
         "",
     }
