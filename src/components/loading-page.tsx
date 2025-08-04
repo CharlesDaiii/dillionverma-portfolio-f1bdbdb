@@ -43,7 +43,7 @@ export const LoadingPage = ({ onComplete, className }: LoadingPageProps) => {
             {"> $ whoami"}
           </TypingAnimation>
           <AnimatedSpan delay={2000} className="text-black-500">
-              <span>> ruiyangdai</span>
+              <span>{"> ruiyangdai"}</span>
           </AnimatedSpan>
 
           <AnimatedSpan delay={3500}>
@@ -53,7 +53,7 @@ export const LoadingPage = ({ onComplete, className }: LoadingPageProps) => {
           </AnimatedSpan>
 
             <AnimatedSpan delay={5000} className="text-black-500">
-              <span>> portfolio  myblog  photos  .git</span>
+              <span>{"> portfolio  myblog  photos  .git"}</span>
           </AnimatedSpan>
           
           <AnimatedSpan delay={6500}>
