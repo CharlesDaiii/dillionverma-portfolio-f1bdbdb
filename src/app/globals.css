@@ -64,10 +64,7 @@
       --input: 0 0% 14.9%;
       --ring: 0 0% 83.1%;
     }
-  .theme {
-        --animate-marquee: marquee var(--duration) infinite linear;
-        --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-    }
+
   }
 
   @layer base {
@@ -147,37 +144,3 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
 
-@theme inline {
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
-        }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-        }
-    }
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-        }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-        }
-    }
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
-        }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-        }
-    }
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-        }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-        }
-    }
-}
