@@ -164,4 +164,20 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     transform: translateY(calc(-100% - var(--gap)));
         }
     }
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+        }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+        }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+        }
+    }
 }
