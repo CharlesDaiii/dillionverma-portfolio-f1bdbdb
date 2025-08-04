@@ -5,6 +5,7 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -57,10 +58,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6 relative",
           fontSans.variable
         )}
       >
+        {/* Global Dot Pattern Background */}
+        <div className="fixed inset-0 -z-10 overflow-hidden">
+          <DotPattern
+            className={cn(
+              "[mask-image:linear-gradient(to_right,white_0%,white_20%,transparent_40%,transparent_60%,white_80%,white_100%)]",
+            )}
+          />
+        </div>
+        
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
