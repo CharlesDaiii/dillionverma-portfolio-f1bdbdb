@@ -1,3 +1,5 @@
+"use client";
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -6,15 +8,75 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { LoadingPage } from "@/components/loading-page";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useEffect, useState } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const [scrollY, setScrollY] = useState(0);
+  const [showLoading, setShowLoading] = useState(true);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    // 只在客户端设置窗口高度
+    setWindowHeight(window.innerHeight);
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      
+      // 当滚动超过视口高度的50%时，开始隐藏loading page
+      if (currentScrollY > window.innerHeight * 0.5) {
+        setShowLoading(false);
+      } else {
+        setShowLoading(true);
+      }
+    };
+
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    // 初始化smooth scrolling
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
+  const loadingOpacity = showLoading && windowHeight > 0 
+    ? Math.max(0, 1 - (scrollY / (windowHeight * 0.5))) 
+    : showLoading ? 1 : 0;
+
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <>
+      {/* Loading Page */}
+      <div 
+        className="fixed inset-0 z-50 transition-opacity duration-300"
+        style={{ 
+          opacity: loadingOpacity,
+          pointerEvents: showLoading ? 'auto' : 'none'
+        }}
+      >
+        <LoadingPage />
+      </div>
+      
+      {/* Spacer for scroll effect */}
+      <div className="h-screen w-full" />
+      
+      {/* Main Content */}
+      <div className="relative z-10">
+        <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-4xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -199,6 +261,8 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-    </main>
+        </main>
+      </div>
+    </>
   );
 }
