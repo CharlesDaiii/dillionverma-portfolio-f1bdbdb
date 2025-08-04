@@ -235,6 +235,38 @@ It uses a combination of fuction calls and polymorphism to handle different user
         "",
     },
     {
+      title: "Rhythm Quest - WebGL Game",
+      href: "https://webgl101.ruiyang.me/RythmQuest.html",
+      dates: "Jan 2025 - Mar 2025",
+      active: true,
+      description:
+      `
+Rhythm Quest is a web-based rhythm game that allows users to play music and dance to the rhythm of the music. I developed the game using WebGL and Three.js in my free time.
+      `,
+      technologies: [
+        'WebGL',
+        'Three.js',
+        'JavaScript',
+        'HTML',
+        'CSS',
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/CharlesDaiii/webgl101",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Website",
+          href: "https://webgl101.ruiyang.me/RythmQuest.html",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/RythmQuest.gif",
+      video:
+        "",
+    },
+    {
       title: "Face Mask Detection - Computer Vision",
       href: "https://github.com/CharlesDaiii/CS-445-FA21-Final-Project/tree/main",
       dates: "Oct 2021 - Nov 2021",
