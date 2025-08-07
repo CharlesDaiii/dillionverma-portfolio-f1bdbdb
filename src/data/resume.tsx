@@ -28,7 +28,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "https://www.kkisadog.site", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "dairuiyang3@gmail.com",
