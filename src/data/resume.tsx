@@ -267,6 +267,36 @@ Rhythm Quest is a web-based rhythm game that allows users to play music and danc
         "",
     },
     {
+      title: "PetPal - a React & Django Web App",
+      href: "https://petpals-pearl.vercel.app/",
+      dates: "Nov 2023 - Dec 2023",
+      active: true,
+      description:
+      `
+PetPal is a web application that builds up a friendly community for pets. It allows users to help their pets find friends based on AI scoring and distance.
+It uses a combination of React and Django to create a full-stack web application.
+      `,
+      technologies: [
+        'React',
+        'Django',
+        'PostgreSQL',
+        'OpenAI',
+        'Python',
+        'CI/CD',
+        'Docker'
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://petpals-pearl.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/PetPal.jpg",
+      video:
+        "",
+    },
+    {
       title: "Face Mask Detection - Computer Vision",
       href: "https://github.com/CharlesDaiii/CS-445-FA21-Final-Project/tree/main",
       dates: "Oct 2021 - Nov 2021",
