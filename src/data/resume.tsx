@@ -132,6 +132,34 @@ export const DATA = {
     }
   ],
   projects: [
+  {
+      title: "Receipe Generator - MCP",
+      href: "",
+      dates: "Aug 2025 - On going",
+      active: true,
+      description:
+      `
+  Designed and implemented a custom Model Context Protocol (MCP) server integrated with Qdrant Cloud for semantic recipe search and generation. Built a Python-based crawler to collect and parse structured recipe data from Wikibooks, stored it in a vector database with embeddings for fast retrieval, and exposed structured MCP tools for seamless interaction with Claude. Delivered a scalable, cloud-ready architecture capable of full-text and semantic filtering, supporting multilingual expansion and further integration with LLM-driven recipe creation workflows.
+      `,
+      technologies: [
+        "Python",
+        "MCP",
+        "Qdrant",
+        'Claude',
+        'LLM',
+        'RAG'
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/CharlesDaiii/cookmcp",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/cookmcp.avif",
+      video:
+        "",
+    }, 
     {
       title: "EatMeFirst - iOS App",
       href: "https://apps.apple.com/us/app/eatmefirst/id6743724982",
